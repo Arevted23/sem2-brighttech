@@ -1,0 +1,182 @@
+// Variables
+$paddingTen: 10rem;
+$paddingTweny: 20rem;
+$font-size: 16px;
+$radiusButton: 5rem;
+$primary-gradient: linear-gradient(to right, blue, green);
+
+// Estilos generales
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// Encabezado y navegación
+.header {
+  background: $primary-gradient;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+  .navigation-header {
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+
+      &:hover {
+        text-decoration: underline;
+        transition: all 1s;
+      }
+    }
+
+    .list-links {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 0;
+    }
+  }
+}
+
+// Sección de inicio
+.inicio {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin-top: 3rem;
+  padding: $paddingTen;
+  padding-top: 80px; // Ajuste para compensar la navegación fija
+
+  p {
+    line-height: 1.5;
+  }
+
+  button {
+    background-color: blue;
+    border-radius: $radiusButton;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darkblue;
+    }
+  }
+}
+
+// Sección de servicios
+.services ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+// Sección Sobre Nosotros
+.aboutUs {
+  padding: 2rem;
+  background-color: #f0f0f0;
+  text-align: left;
+  animation: fadeIn 2s ease-in-out;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #555;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+// Sección de contacto
+.contact {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: left;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darkblue;
+      }
+    }
+  }
+}
